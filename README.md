@@ -40,6 +40,7 @@ ruby
 imagemagick
 
 rubygems: rmagick, nokogiri
+
 In addition, rubygem prawn FROM GITHUB (the normal gem is too old). To install:
 
 	gem install specific_install
