@@ -1,5 +1,4 @@
-Hackers Against Humanity - Actually Open Remix
-==============================================
+# Hackers Against Humanity - Actually Open Remix
 
 A Remix of Hackers Against Humanity, CC BY-NC-SA 2.0, http://hackersagainsthumanity.com.
 
@@ -16,8 +15,7 @@ and released under the GPL v3 license.
 
 All non-source code (including generated products in the Release section) released under CC BY-NC-SA 2.0.
 
-What it is
-----------
+## What it is
 
 I was sad that I couldn't just download a PDF, ready to print, of Hackers Against Humanity. So I made one, and for ease of hacking, I'm releasing the script (so that, for instance, you could make your own cards easily).
 
@@ -27,29 +25,41 @@ The Black Cards file has black squares on every other page. This is intentional,
 
 Note: the Card Against Humanity website hosts a PDF of its deck that prints square cards. I don't like that much, so these PDFs are for 2"x3.5" cards.
 
-What it is not
---------------
+## What it is not
 
 These aren't guaranteed to be perfect reproductions of the HAH deck; for one thing, I don't own one, and for another, I don't have access to their source code. I also fixed a lot of typos. They do, however, look pretty similar, and if you have suggestions for improving the look, by all means let me know!
 
-How to use
-----------
+## Installation
 
-Requirements:
-ruby
-imagemagick
+Software Requirements:
+- ruby
+- ruby-dev
+- imagemagick
+- libmagickwand-dev
 
-rubygems: rmagick, nokogiri
+```sh
+sudo apt install ruby ruby-dev imagemagick libmagickwand-dev
+```
 
-In addition, rubygem prawn FROM GITHUB (the normal gem is too old). To install:
+Ruby gems:
+- rmagick
+- nokogiri
+- prawn
 
-	gem install specific_install
-	gem specific_install https://github.com/prawnpdf/prawn.git
+Install using supplied `Gemfile`:
+
+```sh
+bundle install
+```
+
+## Usage
 
 To run:
 
-	ruby convert.rb
-	
+```sh
+ruby convert.rb
+```
+
 It will walk you through what it's doing. You may just pull the text files out of the HTML, generate the images, generate the PDFs, or all of the above. It will prompt before overwriting anything.
 
 The text files, images, and PDFs in the "Release" section are all as provided by this script, except that typos have been fixed in the text files.
